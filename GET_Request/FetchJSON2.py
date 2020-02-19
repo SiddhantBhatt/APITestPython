@@ -8,6 +8,11 @@ api = "/api/users?page=2"
 # Send GET Request
 response = requests.get(baseURL+api)
 
+# Get response time
+responsetime = response.elapsed
+print(responsetime)
+
+
 # Parse response to JSON format
 
 jsonResponse = json.loads(response.text)
